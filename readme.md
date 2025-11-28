@@ -123,29 +123,10 @@ Docker Container
 |--------------|---------------------------------|----------------------|
 | MODEL_PATH   | Path to the GGUF model          | /models/model.gguf   |
 | N_THREADS    | Number of CPU threads           | 4                    |
-| MAX_TOKENS   | Max output tokens               | 3003                 |
+| MAX_TOKENS   | Max output tokens               | 2048                 |
 | HOST         | Bind address                    | 0.0.0.0              |
-| PORT         | API port                        | 8080                 |
+| PORT         | API port                        | 3003                 |
 
-## API Example
-
-### POST `/generate`
-
-**Request:**
-
-```json
-{
-  "prompt": "What is quantum computing?"
-}
-```
-
-**Response:**
-
-```json
-{
-  "generated_text": "Quantum computing is..."
-}
-```
 
 ## Performance Tips (CPU Only)
 
