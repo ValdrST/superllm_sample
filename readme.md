@@ -98,7 +98,7 @@ http://localhost:3003
 To run in the background:
 
 ```
-docker compose up -d
+docker-compose up -d
 ```
 
 To stop:
