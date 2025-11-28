@@ -89,7 +89,7 @@ Docker Container
 |--------------|---------------------------------|----------------------|
 | MODEL_PATH   | Path to the GGUF model          | /models/model.gguf   |
 | N_THREADS    | Number of CPU threads           | 4                    |
-| MAX_TOKENS   | Max output tokens               | 2048                 |
+| MAX_TOKENS   | Max output tokens               | 3003                 |
 | HOST         | Bind address                    | 0.0.0.0              |
 | PORT         | API port                        | 8080                 |
 
@@ -126,9 +126,30 @@ docker compose down
 docker rmi superllm_sample
 ```
 
+
+## Running & Testing the Pipeline
+
+Once the containers are up, you can run and test the pipeline using the following endpoints:
+
+### ▶️ Run the Pipeline
+Trigger the full ETL + LLM enrichment pipeline:
+
+```
+http://localhost:3002/run_pipeline
+```
+
+### 📥 Fetch Processed Results
+Retrieve enriched and validated records.  
+For example, to fetch the record with ID=10:
+
+```
+http://localhost:3002/posts/10
+```
+
 ## Credits
 
 Built with:
 - llama-cpp-python
 - Python 3
 - Docker
+- PostgreSQL
