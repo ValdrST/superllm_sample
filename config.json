@@ -1,0 +1,12 @@
+{
+    "sql":{
+        "localhost":{
+            "type":"postgresql",
+            "user":"postgres",
+            "password":"postgres",
+            "host":"superllm_sample-postgres",
+            "port":5432,
+            "database":"postgres"
+        }
+    }
+}
