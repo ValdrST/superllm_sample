@@ -13,20 +13,54 @@ It is compatible with **Windows**, **Linux**, and **macOS**, as long as Docker D
 ## Project Structure
 
 ```
-superllm_sample/
+│   config.json
+│   docker-compose.yml
+│   Dockerfile
+│   pyproject.toml
+│   readme.md
 │
-├── docker-compose.yml
-├── Dockerfile
+├───log
+│       superllm_sample.log
 │
-├── app/
-│   ├── __init__.py
-│   ├── wsgi.py
-│   └── inference_engine.py
+├───model
+│       qwen2.5-0.5b-instruct-q4_0.gguf
 │
-├── models/
-│   └── model.gguf
+├───output
+├───postgres
+│       Dockerfile
 │
-└── README.md
+└───src
+    │   readme.md
+    │   requirements.txt
+    │   setup.py
+    │
+    ├───cache
+    ├───live
+    ├───log
+    ├───model
+    ├───output
+    └───superllm_sample
+        │   main.py
+        │   wsgi.py
+        │   __init__.py
+        │
+        ├───core
+        │       Crawler.py
+        │       Server.py
+        │       SQLResolver.py
+        │       __init__.py
+        │
+        ├───fetch
+        │       FetchPostHolder.py
+        │       __init__.py
+        │
+        ├───models
+        │       Qwen.py
+        │       __init__.py
+        │
+        └───pipeline
+                Pipeline.py
+                __init__.py
 ```
 
 ## Model Setup
